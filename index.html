@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+      <html lang="zh-TW">
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">cpstrap - CatchPlay UI Library</title>
+          <meta data-react-helmet="true" name="description" content="cpstrap - easy to use CatchPlay UI Library compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/main.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/"><img src="/assets/logo2.svg" alt="" width="170px"/></a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><a class="nav-link" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://git.catchplay.com/users/sign_in" class="nav-link">Repository</a></li></ul></div></div></nav><div><section class="jumbotron-header text-center mb-3 jumbotron"><div class="container"><div class="row"><div class="col"><p class="lead"><img src="/assets/logo.svg" alt="" width="150px"/></p><h1 class="jumbotron-heading display-4">cpstrap</h1><p class="lead">This lib is ONLY UI component</p><p><a href="https://www.catchplay.com/tw/home" class="btn btn-secondary">CatchPlay Website</a><a class="btn btn-orange-solid" href="/components/">Components</a></p></div></div></div></section><div class="container"><div class="justify-content-sm-center row"><div class="docSearch-content col-sm-8"><h2>Installation</h2><hr/><h3 class="mt-5">NPM</h3><p>Install cpstrap and peer dependencies via NPM</p><pre><code class="language-bash">npm install --save cpstrap react react-dom</code></pre><h3 class="mt-5">Getting Started with Create React App</h3><p>Follow the<!-- --> <a href="https://facebook.github.io/create-react-app/docs/getting-started" target="_blank">Create React App instructions</a>.</p><h4>tl;dr</h4><pre><code class="language-bash">npx create-react-app my-app
+cd my-app
+npm start</code></pre><p>Then open<!-- --> <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> <!-- -->to see your app. The initial structure of your app is setup. Next, let&#x27;s add cpstrap and bootstrap.</p><h4>Adding Cpstrap</h4><p>Install cpstrap and Cpstrap from NPM. cpstrap does not include Cpstrap CSS so this needs to be installed as well:</p><pre><code class="language-bash">npm install --save cpstrap
+npm install --save cpstrap react react-dom</code></pre><p>Import Cpstrap CSS in the <code>src/index.js</code> file:</p><pre><code class="language-bash">import &#x27;cpstrap/dist/css/index.min.css&#x27;;</code></pre><p>Or:</p><pre><code class="language-bash">import &#x27;cpstrap/lib/scss/index.scss&#x27;;</code></pre><p>Import required cpstrap components within<!-- --> <code>src/App.js</code> file or your custom component files:</p><pre><code class="language-bash">import { Button } from &#x27;cpstrap&#x27;;</code></pre><p>Now you are ready to use the imported cpstrap components within your component hierarchy defined in the render method.</p><h2 class="mt-5">About the Project</h2><hr/><p>This library contains React Bootstrap 4 components that favor composition and control. The library does not depend on jQuery or Bootstrap javascript. However,<!-- --> <a href="https://popper.js.org/">https://popper.js.org/</a> via<!-- --> <a href="https://github.com/souporserious/react-popper">https://github.com/souporserious/react-popper</a> <!-- -->is relied upon for advanced positioning of content like Tooltips, Popovers, and auto-flipping Dropdowns.</p><p>There are a few core concepts to understand in order to make the most out of this library.</p><p>1) Your content is expected to be composed via props.children rather than using named props to pass in Components.</p><pre><code class="language-jsx">// Content passed in via props
+const Example = (props) =&gt; {
+  return (
+    &lt;p&gt;This is a tooltip &lt;TooltipTrigger tooltip={TooltipContent}&gt;example&lt;/TooltipTrigger&gt;!&lt;/p&gt;
+  );
+}
+
+// Content passed in as children (Preferred)
+const PreferredExample = (props) =&gt; {
+  return (
+    &lt;p&gt;
+      This is a &lt;a href=&quot;#&quot; id=&quot;TooltipExample&quot;&gt;tooltip&lt;/a&gt; example.
+      &lt;Tooltip target=&quot;TooltipExample&quot;&gt;
+        &lt;TooltipContent/&gt;
+      &lt;/Tooltip&gt;
+    &lt;/p&gt;
+  );
+}</code></pre><p>2) Attributes in this library are used to pass in state, conveniently apply modifier classes, enable advanced functionality (like popperjs), or automatically include non-content based elements.</p><p>Examples:</p><ul><li><code>isOpen</code> - current state for items like dropdown, popover, tooltip</li><li><code>toggle</code> - callback for toggling isOpen in the controlling component</li><li><code>color</code> - applies color classes, ex:<!-- --> <code>&lt;Button color=&quot;danger&quot;/&gt;</code></li><li><code>size</code> for controlling size classes. ex:<!-- --> <code>&lt;Button size=&quot;sm&quot;/&gt;</code></li><li><code>tag</code> - customize component output by passing in an element name or Component</li><li>boolean based props (attributes) when possible for alternative style classes or sr-only content</li></ul></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social">Authors: SnoopYu</p></div></div></div></div></div></div>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+        </body>
+      </html>
