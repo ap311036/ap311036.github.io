@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+      <html lang="zh-TW">
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">cpstrap - ButtonList</title>
+          <meta data-react-helmet="true" name="description" content="cpstrap - easy to use CatchPlay UI Library compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/main.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/"><img src="/assets/logo2.svg" alt="" width="170px"/></a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://git.catchplay.com/users/sign_in" class="nav-link">Repository</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/button/">Button</a></li><li class="nav-item"><a class="nav-link active" href="/components/buttongroup/">ButtonGroup</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/clamp/">Clamp</a></li><li class="nav-item"><a class="nav-link" href="/components/exclusivelabel/">ExclusiveLabel</a></li><li class="nav-item"><a class="nav-link" href="/components/likeicon/">LikeIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/metadata/">MetaData</a></li><li class="nav-item"><a class="nav-link" href="/components/playicon/">PlayIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/shareicon/">ShareIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/slick/">Slick</a></li><li class="nav-item"><a class="nav-link" href="/components/videolabel/">VideoLabel</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">ButtonGroup</h2><div class="docs-example"><div role="group" class="btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Right</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, ButtonGroup } from &#x27;cpstrap&#x27;;
+const tabs = [&#x27;Left&#x27;, &#x27;Right&#x27;];
+const Example = (props) =&gt; {
+  return (
+    &lt;ButtonGroup&gt;
+      {tabs.map((item, index) =&gt; {
+        return &lt;Button key={index}&gt;{item}&lt;/Button&gt;;
+      })}
+    &lt;/ButtonGroup&gt;
+  );
+};
+
+export default Example;
+</code></pre><h2 class="h3">ButtonList</h2><div class="docs-example"><div>Scroll Me<div role="group" class="list btn-group-xs btn-group"><button type="button" class="btn btn-secondary active">S1</button><button type="button" class="btn btn-secondary">S2</button><button type="button" class="btn btn-secondary">S3</button><button type="button" class="btn btn-secondary">S4</button><button type="button" class="btn btn-secondary">S5</button><button type="button" class="btn btn-secondary">S6</button><button type="button" class="btn btn-secondary">S7</button><button type="button" class="btn btn-secondary">S8</button><button type="button" class="btn btn-secondary">S9,</button><button type="button" class="btn btn-secondary">S10</button></div></div></div><pre><code class="language-jsx">import React from &quot;react&quot;;
+import { Button, ButtonGroup } from &quot;cpstrap&quot;;
+const seasons = [&quot;S1&quot;, &quot;S2&quot;, &quot;S3&quot;, &quot;S4&quot;, &quot;S5&quot;, &quot;S6&quot;, &quot;S7&quot;, &quot;S8&quot;, &quot;S9,&quot;, &quot;S10&quot;];
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selected: 0
+    };
+    this.onClickHandler = this.onClickHandler.bind(this);
+  }
+  onClickHandler(index) {
+    this.setState({ selected: index })
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        Scroll Me
+        &lt;ButtonGroup list={true} size=&quot;xs&quot;&gt;
+          {seasons.map((item, index) =&gt; {
+            return (
+              &lt;Button
+                key={index}
+                active={index === this.state.selected}
+                onClick={() =&gt; this.onClickHandler(index)}
+              &gt;
+                {item}
+              &lt;/Button&gt;
+            );
+          })}
+        &lt;/ButtonGroup&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Example;
+</code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">ButtonGroup.propTypes = {
+  className: PropTypes.string,
+  tag: PropTypes.string,
+}</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social">Authors: SnoopYu</p></div></div></div></div></div></div>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+        </body>
+      </html>

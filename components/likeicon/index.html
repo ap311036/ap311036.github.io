@@ -11,7 +11,7 @@
           <link rel="stylesheet" href="/assets/docs.css"/>
         </head>
         <body>
-          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/"><img src="/assets/logo2.svg" alt="" width="170px"/></a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://git.catchplay.com/users/sign_in" class="nav-link">Repository</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/button/">Button</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/clamp/">Clamp</a></li><li class="nav-item"><a class="nav-link" href="/components/exclusivelabel/">ExclusiveLabel</a></li><li class="nav-item"><a class="nav-link active" href="/components/likeicon/">LikeIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/metadata/">MetaData</a></li><li class="nav-item"><a class="nav-link" href="/components/playicon/">PlayIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/shareicon/">ShareIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/slick/">Slick</a></li><li class="nav-item"><a class="nav-link" href="/components/videolabel/">VideoLabel</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">LikeIcon</h2><div class="docs-example"><div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g fill="none" fill-rule="evenodd"><circle cx="18" cy="18" r="18" opacity=".15"></circle><path stroke="#FFF" stroke-width="2" d="M7.022 18.998A7.063 7.063 0 0 1 5 14.033C5 10.15 8.104 7 11.933 7c2.61 0 4.884 1.463 6.067 3.626C19.183 8.463 21.456 7 24.067 7 27.896 7 31 10.149 31 14.033a7.063 7.063 0 0 1-2.022 4.965L18 30 7.022 18.998z"></path></g></svg></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/"><img src="/assets/logo2.svg" alt="" width="170px"/></a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://git.catchplay.com/users/sign_in" class="nav-link">Repository</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/button/">Button</a></li><li class="nav-item"><a class="nav-link" href="/components/buttongroup/">ButtonGroup</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/clamp/">Clamp</a></li><li class="nav-item"><a class="nav-link" href="/components/exclusivelabel/">ExclusiveLabel</a></li><li class="nav-item"><a class="nav-link active" href="/components/likeicon/">LikeIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/metadata/">MetaData</a></li><li class="nav-item"><a class="nav-link" href="/components/playicon/">PlayIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/shareicon/">ShareIcon</a></li><li class="nav-item"><a class="nav-link" href="/components/slick/">Slick</a></li><li class="nav-item"><a class="nav-link" href="/components/videolabel/">VideoLabel</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">LikeIcon</h2><div class="docs-example"><div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><g fill="none" fill-rule="evenodd"><circle cx="18" cy="18" r="18" opacity=".15"></circle><path stroke="#FFF" stroke-width="2" d="M7.022 18.998A7.063 7.063 0 0 1 5 14.033C5 10.15 8.104 7 11.933 7c2.61 0 4.884 1.463 6.067 3.626C19.183 8.463 21.456 7 24.067 7 27.896 7 31 10.149 31 14.033a7.063 7.063 0 0 1-2.022 4.965L18 30 7.022 18.998z"></path></g></svg></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { LikeIcon } from &#x27;cpstrap&#x27;;
 
 class Example extends React.Component {
@@ -25,7 +25,7 @@ class Example extends React.Component {
   }
   onClickHandler() {
     const { fill } = this.state;
-    this.setState({ fill: fill ? false : true});
+    this.setState({ fill: !fill });
   }
   render() {
     const { fill } = this.state;
@@ -44,9 +44,10 @@ class Example extends React.Component {
 
 export default Example;
 </code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">LikeIcon.propTypes = {
-  staticRoot: PropTypes.string, // default: &#x27;&#x27;
-  type: PropTypes.string, // default: &#x27;img&#x27; [img|text]
-  lng: PropTypes.string // default: &#x27;zh-tw&#x27; [zh-tw|en-us|id-id]
+  placement: PropTypes.string,
+  overlay: PropTypes.string,
+  fill: PropTypes.string,
+  onClick: PropTypes.func,
 }</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social">Authors: SnoopYu</p></div></div></div></div></div></div>
           <script src="/assets/prism.js" data-manual></script>
           <script src="/bundle.js"></script>

@@ -8558,5 +8558,29 @@ body {
       background-color: #ffffff;
       color: #000; }
 
+.btn-group.list {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transform: translate3d(0, 0, 0);
+  white-space: nowrap; }
+  .btn-group.list::-webkit-scrollbar-thumb {
+    background: transparent; }
+  .btn-group.list .btn {
+    background-color: #3a3a3a;
+    color: #cbcbcb;
+    cursor: pointer;
+    border: none;
+    margin: auto 2px auto auto;
+    min-width: 60px;
+    padding: 10px 2px; }
+    .btn-group.list .btn:hover {
+      background: #525252;
+      color: #ffffff; }
+    .btn-group.list .btn.active, .btn-group.list .btn:active {
+      background-color: #ffffff;
+      color: #000; }
+
 
 /*# sourceMappingURL=main.css.map*/
