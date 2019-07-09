@@ -8565,8 +8565,8 @@ body {
   overflow-y: hidden;
   transform: translate3d(0, 0, 0);
   white-space: nowrap; }
-  .btn-group.list::-webkit-scrollbar-thumb {
-    background: transparent; }
+  .btn-group.list::-webkit-scrollbar {
+    display: none; }
   .btn-group.list .btn {
     background-color: #3a3a3a;
     color: #cbcbcb;
