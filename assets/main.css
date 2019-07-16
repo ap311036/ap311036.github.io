@@ -8785,6 +8785,9 @@ body {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
+  .slick-slider:hover .slick-prev:before,
+  .slick-slider:hover .slick-next:before {
+    opacity: 1; }
 
 .slick-list {
   position: relative;
