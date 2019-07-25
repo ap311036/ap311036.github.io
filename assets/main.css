@@ -8725,6 +8725,13 @@ body {
   z-index: 1; }
   .movie-card.zoom {
     z-index: 2; }
+    .movie-card.zoom .movie-card-zoom {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+      pointer-events: auto; }
+      .movie-card.zoom .movie-card-zoom > * {
+        background-color: #0e0e0e;
+        box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.37); }
   .movie-card .movie-card-inner {
     position: relative; }
   .movie-card .card-image-wrapper {
@@ -8800,13 +8807,6 @@ body {
       .movie-card .movie-card-zoom {
         width: 200%;
         left: -50%; } }
-    .movie-card .movie-card-zoom.hover {
-      opacity: 1;
-      transform: translate3d(0, 0, 0) scale(1);
-      pointer-events: auto; }
-      .movie-card .movie-card-zoom.hover > * {
-        background-color: #0e0e0e;
-        box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.37); }
     .movie-card .movie-card-zoom.left {
       left: 0; }
     .movie-card .movie-card-zoom.right {
