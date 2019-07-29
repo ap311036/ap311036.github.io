@@ -8171,6 +8171,17 @@ html {
   html .font-stroke {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(5px + .2vw);
+  align-items: baseline;
+  min-height: 33px; }
+  .section-header .title {
+    font-size: calc(20px + .2vw);
+    color: #f26f21;
+    font-weight: bolder; }
+
 .avatar .cover {
   border-radius: 50%;
   position: relative;
@@ -9028,17 +9039,6 @@ body {
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
-
-.slick-section-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: calc(5px + .2vw);
-  align-items: baseline;
-  min-height: 33px; }
-  .slick-section-header .slick-title {
-    font-size: calc(20px + .2vw);
-    color: #f26f21;
-    font-weight: bolder; }
 
 .sound-icon {
   width: 36px;
