@@ -8182,6 +8182,9 @@ html {
     color: #f26f21;
     font-weight: bolder; }
 
+.avatar .avatar-image {
+  opacity: 0; }
+
 .avatar .cover {
   border-radius: 50%;
   position: relative;
