@@ -9089,59 +9089,6 @@ body {
     background: #525252;
     color: #fff; }
 
-.slick-container {
-  display: flex;
-  padding: 0 55px; }
-  .slick-container:hover .item {
-    transform: translateX(-25%); }
-
-.item {
-  background: green;
-  flex: 0 0 19.7%;
-  text-align: center;
-  margin: 0 2px;
-  transition: transform 300ms ease 100ms; }
-  .item:hover {
-    transform: scale(1.5) !important; }
-    .item:hover ~ .item {
-      transform: translateX(25%); }
-
-.content {
-  margin-top: 40px;
-  height: 300px;
-  position: relative; }
-
-.background {
-  display: flex;
-  height: 100%; }
-
-.left {
-  background: black;
-  width: 30%;
-  position: relative; }
-
-.left:before {
-  content: '';
-  position: absolute;
-  background-image: linear-gradient(to right, #000, transparent);
-  top: 0;
-  bottom: 0;
-  left: 100%;
-  width: 275px; }
-
-.right {
-  background: green;
-  width: 70%; }
-
-.content-container {
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 30px; }
-
 .content {
   position: relative;
   height: 37vw;
@@ -9202,6 +9149,60 @@ body {
     top: 30px;
     right: 30px; }
 
+.item {
+  flex: 0 0 19.7%;
+  transition: transform 300ms ease 100ms;
+  margin: 0 2px;
+  position: relative; }
+  .item img {
+    height: 100%;
+    width: 100%;
+    vertical-align: top; }
+
+.mark {
+  box-sizing: border-box;
+  border: solid 4px #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  z-index: 4; }
+  .mark:before, .mark:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    top: 100%;
+    left: 50%;
+    margin-left: -13px;
+    border-style: solid;
+    border-width: 7px 13px 0 13px; }
+  .mark:before {
+    border-color: rgba(0, 0, 0, 0.15) transparent transparent transparent;
+    margin-top: 5px; }
+  .mark:after {
+    margin-top: 4px;
+    border-color: #fff transparent transparent transparent; }
+
+.show-details-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 300ms ease 100ms;
+  background: transparent;
+  border: 0;
+  outline: none;
+  width: 100%; }
+  .show-details-button span {
+    display: block;
+    width: 14px;
+    margin: 0 auto;
+    color: white; }
+
 .slide-button {
   position: absolute;
   top: 0;
@@ -9250,59 +9251,58 @@ body {
   .slider:not(.slider--open) .item:hover ~ .item {
     transform: translateX(25%); }
 
-.show-details-button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: opacity 300ms ease 100ms;
-  background: transparent;
-  border: 0;
-  outline: none;
-  width: 100%; }
-  .show-details-button span {
-    display: block;
-    width: 14px;
-    margin: 0 auto;
-    color: white; }
+.slick-container {
+  display: flex;
+  padding: 0 55px; }
+  .slick-container:hover .item {
+    transform: translateX(-25%); }
 
-.mark {
-  box-sizing: border-box;
-  border: solid 4px #fff;
+.item {
+  background: green;
+  flex: 0 0 19.7%;
+  text-align: center;
+  margin: 0 2px;
+  transition: transform 300ms ease 100ms; }
+  .item:hover {
+    transform: scale(1.5) !important; }
+    .item:hover ~ .item {
+      transform: translateX(25%); }
+
+.content {
+  margin-top: 40px;
+  height: 300px;
+  position: relative; }
+
+.background {
+  display: flex;
+  height: 100%; }
+
+.left {
+  background: black;
+  width: 30%;
+  position: relative; }
+
+.left:before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to right, #000, transparent);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 275px; }
+
+.right {
+  background: green;
+  width: 70%; }
+
+.content-container {
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: -4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  z-index: 4; }
-  .mark:before, .mark:after {
-    position: absolute;
-    width: 0;
-    height: 0;
-    content: '';
-    top: 100%;
-    left: 50%;
-    margin-left: -13px;
-    border-style: solid;
-    border-width: 7px 13px 0 13px; }
-  .mark:before {
-    border-color: rgba(0, 0, 0, 0.15) transparent transparent transparent;
-    margin-top: 5px; }
-  .mark:after {
-    margin-top: 4px;
-    border-color: #fff transparent transparent transparent; }
-
-.item {
-  flex: 0 0 19.7%;
-  transition: transform 300ms ease 100ms;
-  margin: 0 2px;
-  position: relative; }
-  .item img {
-    height: 100%;
-    width: 100%;
-    vertical-align: top; }
+  bottom: 0;
+  padding: 30px; }
 
 
 /*# sourceMappingURL=main.css.map*/
