@@ -28,6 +28,11 @@ const data = [
   &quot;https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0011/artworks/posters/PTS-TW-D0001-01-0011-E272.jpg&quot;
 ];
 
+
+const getPopupContainer = (trigger) =&gt; {
+    return trigger.parentNode;
+  }
+
 const Example = (props) =&gt; {
   return (
     &lt;Slick title=&quot;集數&quot;&gt;
@@ -39,8 +44,9 @@ const Example = (props) =&gt; {
             playicon={true}
             key={index}
             labelText={index &lt;= 3 &amp;&amp; &quot;免費&quot;}
+            getPopupContainer={getPopupContainer}
           &gt;
-            &lt;EpisodeCard src=&quot;https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg&quot; /&gt;
+            &lt;p style={{ padding: 10, background: &quot;gray&quot; }}&gt;{index + 1}&lt;/p&gt;
           &lt;/Card&gt;
         );
       })}
